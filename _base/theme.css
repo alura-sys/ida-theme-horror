@@ -1,3 +1,8 @@
+/* _base/theme.css - Aero Dark Base Adjustments */
+
+/* Slightly softer base highlight, can be overridden by specific themes */
+@def base_highlight_color rgba(70, 80, 95, 0.75); /* Softer blue-gray highlight */
+
 DockWidgetTitle
 {
     padding: 0px;
@@ -340,48 +345,7 @@ TCpuRegs[os-dark-theme="true"]
     qproperty-register-unavailable: #808080; /* Gray unavailable */
 }
 
-TCpuRegs ui_label_t[os-dark-theme="true"]
-{
-    color: #A0A8B0; /* Lighter gray label */
-}
 
-/* Navband Base (will be overridden) */
-navband_t
-{
-    /* ... light theme colors ... */
-    qproperty-lib-function : #75757a;
-    qproperty-function : #606065;
-    /* ... etc ... */
-    qproperty-gap : black;
-    qproperty-cursor : #85857a;
-}
-
-/* Navband Dark Theme Override - Aero Colors */
-navband_t[os-dark-theme="true"]
-{
-    qproperty-lib-function: #80B0D0;    /* Light Blue */
-    qproperty-function: #A0C8E0;        /* Brighter Blue */
-    qproperty-code: #C8A0A0;            /* Soft Red/Brown */
-    qproperty-data: #C0C0C0;            /* Silver */
-    qproperty-undefined: #707888;       /* Dark Slate Gray */
-    qproperty-extern: #C8A0C8;          /* Soft Purple */
-    qproperty-lumina-function: #80B080; /* Soft Green */
-
-    qproperty-hl-lib-function: #90C0E0;
-    qproperty-hl-function: #B0D8F0;
-    qproperty-hl-code: #D8B0B0;
-    qproperty-hl-data: #D8D8D8;
-    qproperty-hl-undefined: #808898;
-    qproperty-hl-extern: #D8B0D8;
-    qproperty-hl-lumina-function: #90C090;
-
-    qproperty-hl-outline : #9098A8;     /* Outline highlight */
-
-    qproperty-error: #D88080;           /* Error color */
-    qproperty-gap: #101215;             /* Very dark gap */
-    qproperty-cursor: #FFFFB0;          /* Bright yellow cursor */
-    qproperty-auto-analysis-cursor: #FFB060; /* Orange analysis cursor */
-}
 
 /* Chooser Diff Highlights (using adjusted base defs) */
 TChooser,
@@ -402,28 +366,6 @@ diff_fringe_t
     background-color: white;
     /* ... light theme colors ... */
 }
-
-/* Diff Fringe Dark Theme Override - Aero Colors */
-diff_fringe_t[os-dark-theme="true"]
-{
-    background-color: #20242A; /* Dark background */
-
-    qproperty-diff-region-pick:                             ${diff_region_pick_l};
-    qproperty-diff-region-pick-boundaries:                  #60A060; /* Darker green boundary */
-    qproperty-diff-region-pick-current:                     ${diff_region_pick};
-    qproperty-diff-region-pick-current-boundaries:          ${diff_region_pick_d};
-
-    qproperty-diff-region-leave:                            ${diff_region_leave_l};
-    qproperty-diff-region-leave-boundaries:                 #808080; /* Darker gray boundary */
-    qproperty-diff-region-leave-current:                    ${diff_region_leave};
-    qproperty-diff-region-leave-current-boundaries:         ${diff_region_leave_d};
-
-    qproperty-diff-region-conflict:                         ${diff_region_conflict_l};
-    qproperty-diff-region-conflict-boundaries:              #C06040; /* Darker orange boundary */
-    qproperty-diff-region-conflict-current:                 ${diff_region_conflict};
-    qproperty-diff-region-conflict-current-boundaries:      ${diff_region_conflict_d};
-}
-
 
 /* --- Keep Icon Definitions As Is --- */
 IDAMainWindow
