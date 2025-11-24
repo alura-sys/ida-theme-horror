@@ -223,6 +223,11 @@ ActionsInspector QKeySequenceEdit
     width: 16em;
 }
 
+navband_t
+{
+    qproperty-data : #1A171F;
+}
+
 /* CustomIDAMemo base settings - Adjusted for Aero Dark */
 CustomIDAMemo
 {
